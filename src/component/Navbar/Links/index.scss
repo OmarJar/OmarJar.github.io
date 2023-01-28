@@ -1,0 +1,72 @@
+.icon {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+    a {
+        transition: color 0.4s ease;
+        position: relative;
+        font-size: clamp(0.1rem, 10vw + 0.5rem, 1.3rem);
+        font-family: 'Rubik Vinyl', cursive;
+        color: #ffffff;
+        display: block;
+        line-height: 51px;
+        height: 51px;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+            color: #ffd700;
+        }
+
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+    }
+
+    .fixed {
+        color: #ffd700;
+        transition: color 0.4s ease;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .navbar {
+        a {
+            font-size: 2vw;
+        }
+
+        a:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .icon {
+        display: block;
+    }
+
+    .navbar {
+
+        a {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+
+            // font-size: 2.7vw;
+            span {
+                display: none;
+            }
+        }
+
+        a:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+}

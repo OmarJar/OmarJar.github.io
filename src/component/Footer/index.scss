@@ -1,0 +1,88 @@
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    z-index: 1111;
+    opacity: 0.6;
+
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .rights {
+            p {
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+        }
+
+        .contact-part {
+            div {
+                margin: 5% auto;
+            }
+        }
+
+        .bottom-links {
+            a {
+                svg {
+                    display: none;
+                }
+
+                font-size: 15px;
+                cursor: pointer;
+
+                &:hover {
+                    color: #ffd700;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+    .social-media {
+        display: flex;
+        flex-direction: unset;
+        margin: 0;
+
+        a {
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        .footer-container {
+            display: block;
+
+            .bottom-links {
+                // display: grid;
+                // grid-template-columns: 1fr 1fr;
+                // grid-template-rows: 1fr 1fr;
+                // row-gap: 20px;
+                // place-items: center;
+                margin: 30px auto;
+            }
+
+            .contact-part {
+                margin: 30px auto;
+                .omar-logo{
+                    margin: 0 auto;
+                    a{
+                        .logo{
+                            margin-top: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

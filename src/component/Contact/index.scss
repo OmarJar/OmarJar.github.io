@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400&display=swap');
+
+.contact-page {
+    h4 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: clamp(1.4rem, 2.5vh, 2rem);
+        font-family: 'Josefin Sans', sans-serif;
+        color: #fff;
+    }
+
+    p {
+        text-align: center;
+        margin: 20px auto;
+        font-size: clamp(1.2rem, 2.5vh, 2rem);
+        font-family: 'Josefin Sans', sans-serif;
+        color: #4fc727;
+        max-width: 50%;
+    }
+
+    .contact-form {
+        width: 50%;
+        margin: 0 auto;
+
+        :focus {
+            outline: none;
+        }
+
+        .input-area {
+            position: relative;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea[type="text"] {
+            width: 100%;
+            box-sizing: border-box;
+            animation: fadeInUp 2s forwards;
+            border: 1px solid black;
+            color: black;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 140px;
+        }
+
+        .effect-1 {
+
+            padding: 15px;
+            position: relative;
+            margin-bottom: 5px;
+            color: #ffffff;
+
+            &:focus {
+                &::placeholder {
+                    opacity: 0;
+                    transition: opacity 0.5s ease;
+                }
+            }
+        }
+
+        .effect-1::placeholder {
+            color: #000;
+            opacity: 0.6;
+            transition: opacity 0.5s ease;
+        }
+
+        .effect-1~.focus-border {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: green;
+            transition: 0.4s;
+        }
+
+        .effect-1:focus~.focus-border {
+            width: 100%;
+            transition: 0.4s;
+        }
+
+        .first {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            div {
+                width: 49.5%;
+            }
+        }
+
+        .btn-container {
+            display: flex;
+            animation: fadeIn 1s forwards;
+            justify-content: center;
+            margin-bottom: 5%;
+
+            button.contact-btn {
+                font-family: inherit;
+                font-size: 20px;
+                background-color: #3a3a3a;
+                border: 1px #4fc727 solid;
+                color: white;
+                padding: 0.5em 1.5em;
+                display: flex;
+                align-items: center;
+                border-radius: 16px;
+                overflow: hidden;
+                transition: all 0.2s;
+                cursor: pointer;
+                animation: fadeInUp 2s forwards, headShake 1s 4.5s forwards;
+            }
+
+            button span {
+                display: block;
+                margin-left: 0.3em;
+                transition: all 0.3s ease-in-out;
+            }
+
+            button svg {
+                display: block;
+                transform-origin: center center;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            button:hover .svg-wrapper {
+                animation: fly-1 0.6s ease-in-out infinite alternate;
+            }
+
+            button:hover svg {
+                transform: translateX(1.2em) rotate(45deg) scale(1.1);
+
+                #arrow {
+                    fill: #4fc727;
+                }
+
+            }
+
+            button:hover span {
+                transform: translateX(3.8em);
+            }
+
+            button:active {
+                transform: scale(0.95);
+            }
+
+            @keyframes fly-1 {
+                from {
+                    transform: translateY(0.1em);
+                }
+
+                to {
+                    transform: translateY(-0.1em);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .contact-page{
+        p{
+            max-width: 80%;
+        }
+        .contact-form{
+            
+            width: 80%;
+        }
+    }
+}
+
+@media screen and (max-width: 550px){
+    .contact-page{
+        .contact-form{
+            .first{
+                display: block;
+                .input-area{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

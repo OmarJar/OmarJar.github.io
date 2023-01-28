@@ -1,0 +1,45 @@
+#omar {
+position: relative;
+.custom-shape-divider-bottom-1674488500 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: -1;
+}
+
+.custom-shape-divider-bottom-1674488500 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 192px;
+}
+
+.custom-shape-divider-bottom-1674488500 .shape-fill {
+  fill: #60B644;
+}
+  #navbar-div {
+    // background-color: rgb(34, 63, 88);
+    background-color: rgb(133, 174, 112);
+    position: sticky;
+    top: 0;
+    z-index: 1111;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  #navbar-div {
+    width: 100vw;
+    height: 50px;
+  }
+}
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

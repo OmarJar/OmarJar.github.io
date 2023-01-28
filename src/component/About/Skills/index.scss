@@ -1,0 +1,54 @@
+.skills {
+    text-align: center;
+    margin-top: 4%;
+    #skills-bars {
+        max-width: 50%;
+        margin: 0 auto;
+
+        div:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        &:last-child{
+            margin-bottom: 40px;
+        }
+
+        .skill {
+                text-align: left;
+            .text{
+                display: flex;
+                justify-content: space-between;
+            }
+            .skill-bar {
+                border: 1px solid #4fc727;
+                border-radius: 20px;
+                max-width: 100%;
+            }
+        }
+
+        #html-per,
+        #css-per,
+        #scss-per,
+        #boot-per,
+        #js-per,
+        #jq-per,
+        #react-per,
+        #dx-per {
+            height: 5px;
+            background-color: #4fc727;
+            border-radius: 20px;   
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .skills{
+        margin-top: 40px;
+        #skills-bars{
+            max-width: 80%;
+
+            &:last-child{
+                margin-bottom: 40px;
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+.omar-logo {
+    a {
+        .logo {
+            height: 50px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .omar-logo{
+        max-width: 150px;
+        a{
+            width: 180px;
+            height: 40px;
+            .logo{
+                width: inherit;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    .omar-logo{
+        max-width: 150px;
+        a{
+            max-width: 140px;
+            
+            .logo{
+                max-width: inherit;
+                max-height: 40px;
+            }
+        }
+    }
+}

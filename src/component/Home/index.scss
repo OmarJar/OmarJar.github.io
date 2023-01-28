@@ -1,0 +1,181 @@
+$primary-color: #ffd700;
+@import 'animate.css';
+@import '~loaders.css/src/animations/ball-scale-ripple-multiple.scss';
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+
+.container {
+position: relative;
+    .custom-shape-divider-bottom-1674474804 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+    
+    .custom-shape-divider-bottom-1674474804 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 150px;
+    }
+    
+    .custom-shape-divider-bottom-1674474804 .shape-fill {
+        fill: #FFFFFF;
+    }
+    .first-section {
+        // background-color: #ffba08;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .definition {
+            #h1 {
+                cursor: default;
+                width: fit-content;
+                font-size: clamp(4.5rem, 2.5vh, 5rem);
+                animation: fadeIn 3s forwards;
+                text-align: center;
+                // font-family: 'Coolvetica';
+                font-family: 'Rubik Vinyl', cursive;
+                font-weight: 200;
+                color: #fff;
+                text-align: left;
+                margin: 0 0 20px 20px;
+                position: relative;
+            }
+        }
+
+        .svg-letter {
+            max-width: 55%;
+            width: 100%;
+            display: flex;
+
+            svg {
+
+                .cls-1,
+                .cls-2,
+                .cls-3 {
+                    fill: none;
+                }
+            }
+
+            .cls-1 {
+                stroke-dasharray: 2090;
+                animation: 4s fillSvg1 ease-in-out forwards;
+            }
+
+            .cls-2 {
+                stroke-dasharray: 2090;
+                animation: 4s fillSvg1 ease-in-out forwards;
+            }
+
+            .cls-3 {
+                stroke-dasharray: 1009;
+                animation: 2s fillSvg3 ease-in-out forwards;
+            }
+
+            .cls-4 {
+                fill: #85AE70;
+                -webkit-animation: 3s fillSvg4 ease-in-out forwards, shakeX 0.5s 4s forwards;
+                -moz-animation: 3s fillSvg4 ease-in-out forwards, shakeX 0.5s 4s forwards;
+                -o-animation: 3s fillSvg4 ease-in-out forwards, shakeX 0.5s 4s forwards;
+                animation: 3s fillSvg4 ease-in-out forwards, shakeX 0.5s 4s forwards;
+            }
+
+            .cls-5 {
+                stroke-dasharray: 1012;
+                animation: 2s fillSvg3 ease-in-out forwards;
+                stroke-width: 1px;
+                fill: none;
+            }
+
+            @keyframes fillSvg1 {
+                0% {
+                    stroke-dashoffset: 2090;
+                    stroke: #4fc727;
+                    stroke-width: 1.5px;
+                }
+
+                100% {
+                    stroke-dashoffset: 0;
+                    stroke: #4fc727;
+                    stroke-width: 1.5px;
+                }
+            }
+
+            @keyframes fillSvg3 {
+                0% {
+                    stroke-dashoffset: 1009;
+                    stroke: #4fc727;
+                    stroke-width: 1.25px;
+                }
+
+                100% {
+                    stroke-dashoffset: 0;
+                    stroke: #4fc727;
+                    stroke-width: 1.25px;
+                }
+            }
+
+            @keyframes fillSvg4 {
+                from {
+                    opacity: 0;
+                }
+
+                to {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .second-section {
+        margin-top: 2%;
+        .my-posititon {
+            display: flex;
+            flex-direction: column;
+            #back-end{
+                opacity: 0.2;
+            }
+            #front-end-title,
+            #extra-title {
+                cursor: default;
+                color: #ffffff;
+                font-size: 4vw;
+                animation: bounceInLeft 2s 1s both;
+                font-family: 'Rubik Vinyl', cursive;
+                margin: auto;
+                font-weight: 300;
+                text-align: center;
+            }
+
+            #extra-title {
+                animation: bounceInRight 2s 1.5s both;
+                // margin: 1%;
+                margin: auto;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .container{
+        .first-section{
+            display: block;
+            .definition{
+                #h1{
+                    margin: 0 auto;
+                    font-size: 15vw;
+                    text-align: center;
+                }
+            }
+            .svg-letter{
+                max-width: 90%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
