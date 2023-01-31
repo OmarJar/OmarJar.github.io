@@ -8,12 +8,6 @@ const Home = () => {
   const [visible, setVisible] = useState(false)
   const [isHovered, setIsHovered] = useState(false);
   document.getElementById("body").style.overflowX="hidden"
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setVisible(true)
-  //   }, 1500)
-    
-  // }, [isHovered])
   useEffect(() => {
     let timeoutId = setTimeout(() => {
       setVisible(true)
