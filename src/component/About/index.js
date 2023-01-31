@@ -8,11 +8,7 @@ import data, { info } from './data'
 const About = () => {
   const { edu, aboutMe, title } = info
   const [visible, setVisible] = useState(false)
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setVisible(true)
-  //   }, 1500)
-  // }, [])
+
   useEffect(() => {
     let timeoutId = setTimeout(() => {
       setVisible(true)
