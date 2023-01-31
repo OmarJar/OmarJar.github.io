@@ -8,11 +8,20 @@ import data, { info } from './data'
 const About = () => {
   const { edu, aboutMe, title } = info
   const [visible, setVisible] = useState(false)
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setVisible(true)
+  //   }, 1500)
+  // }, [])
   useEffect(() => {
-    setTimeout(() => {
+    let timeoutId = setTimeout(() => {
       setVisible(true)
     }, 1500)
+    return () => {
+      clearTimeout(timeoutId)
+    }
   }, [])
+
   const study = data.map(e => {
     return <li key={e.id}>{e.txt}</li>
   })

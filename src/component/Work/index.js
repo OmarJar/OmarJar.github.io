@@ -12,10 +12,13 @@ import { AnimationOnScroll } from 'react-animation-on-scroll'
 const Work = () => {
     const [visible, setVisible] = useState(false)
     useEffect(() => {
-        setTimeout(() => {
-            setVisible(true)
+        let timeoutId = setTimeout(() => {
+          setVisible(true)
         }, 1500)
-    }, [])
+        return () => {
+          clearTimeout(timeoutId)
+        }
+      }, [])
     return (
         <>
             {visible && <div className="work">

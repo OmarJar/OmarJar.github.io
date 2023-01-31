@@ -7,9 +7,12 @@ const Contact = () => {
   const [visible, setVisible] = useState(false)
   const refForm = useRef()
   useEffect(() => {
-    setTimeout(() => {
+    let timeoutId = setTimeout(() => {
       setVisible(true)
     }, 1500)
+    return () => {
+      clearTimeout(timeoutId)
+    }
   }, [])
   const sendEmail = (e) => {
     e.preventDefault()

@@ -7,10 +7,13 @@ import "./index.scss"
 const Footer = () => {
     const [visible, setVisible] = useState(false)
     useEffect(() => {
-        setTimeout(() => {
-            setVisible(true)
-        }, 2000)
-    }, [])
+        let timeoutId = setTimeout(() => {
+          setVisible(true)
+        }, 1500)
+        return () => {
+          clearTimeout(timeoutId)
+        }
+      }, [])
     return (
         <>
             {visible &&

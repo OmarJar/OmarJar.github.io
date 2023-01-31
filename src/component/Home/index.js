@@ -8,14 +8,21 @@ const Home = () => {
   const [visible, setVisible] = useState(false)
   const [isHovered, setIsHovered] = useState(false);
   document.getElementById("body").style.overflowX="hidden"
-  useEffect(() => {
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setVisible(true)
+  //   }, 1500)
     
-    setTimeout(() => {
+  // }, [isHovered])
+  useEffect(() => {
+    let timeoutId = setTimeout(() => {
       setVisible(true)
     }, 1500)
     isHovered && (document.getElementById('extra-title').style.animation = "shakeX 1s")
+    return () => {
+      clearTimeout(timeoutId)
+    }
   }, [isHovered])
-
   const shaking = () => {
     setIsHovered(false)
     document.getElementById("extra-title").style.animation = "fdar 0s"
