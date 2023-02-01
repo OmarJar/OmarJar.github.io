@@ -87,9 +87,6 @@ const Links = (props) => {
                 <span>Contact Me</span>
                 <FontAwesomeIcon icon={faEnvelope} className="icon" />
             </Jump>
-            <Jump className={contact ? "fixed" : undefined} to="contact-page" spy={true} smooth={true} offset={0} duration={1500}>
-                <span>Coming soon</span>
-            </Jump>
         </div>
     )
 }
