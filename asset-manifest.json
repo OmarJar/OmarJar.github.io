@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.23e50dfb.css",
-    "main.js": "/static/js/main.eadf74af.js",
+    "main.js": "/static/js/main.b02e999a.js",
     "static/media/Weather1.gif": "/static/media/Weather1.e10b07329befb96bf329.gif",
     "static/media/WhatsApp.jpg": "/static/media/WhatsApp.ffe2c9b9f16e2c06d760.jpg",
     "static/media/logo.png": "/static/media/logo.4518c4f3058c40b3f548.png",
@@ -17,10 +17,10 @@
     "static/media/javascript.svg": "/static/media/javascript.fe20feb841b6dd81a47c9c073c86d89a.svg",
     "static/media/html.svg": "/static/media/html.a98fbda9c6d0d9eb93b317cccbe070c6.svg",
     "main.23e50dfb.css.map": "/static/css/main.23e50dfb.css.map",
-    "main.eadf74af.js.map": "/static/js/main.eadf74af.js.map"
+    "main.b02e999a.js.map": "/static/js/main.b02e999a.js.map"
   },
   "entrypoints": [
     "static/css/main.23e50dfb.css",
-    "static/js/main.eadf74af.js"
+    "static/js/main.b02e999a.js"
   ]
 }
