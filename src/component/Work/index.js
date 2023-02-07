@@ -31,27 +31,27 @@ const Work = () => {
                         <WorkBox
                             img={whatImg}
                             buttons="2"
-                            url="https://whatsapp-react.omar90a.repl.co/"
-                            url2="https://whatsapp.omar90a.repl.co/"
+                            url="https://omarjar.github.io/whatsapp-react/"
+                            url2="https://omarjar.github.io/WhatsApp-Website-clone/"
                             title="WhatsApp"
                             icon=<ReactImg />
                             icon2=<HtmlImg />
                         />
                         <WorkBox
                             img={weatherImg}
-                            url="https://weather-app.omar90a.repl.co/"
+                            url="https://omarjar.github.io/weather/"
                             title="Weather"
                             icon=<JavaScriptImg />
                         />
                         <WorkBox
                             img={deenImg}
-                            url="https://musdev.omar90a.repl.co/index.html"
+                            url="https://omarjar.github.io/musdev/"
                             title="Community Website"
                             icon=<JavaScriptImg />
                         />
                         <WorkBox
                             img={quizImg}
-                            url="https://codequiz.omar90a.repl.co/"
+                            url="https://omarjar.github.io/codequiz/"
                             title="Multi Choice Questions"
                             icon=<ReactImg />
                         />
